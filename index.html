@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pool Hopper — Support & Help Center</title>
+  <title>The Pool Hopper — Support &amp; Help Center</title>
+  <meta name="description" content="Get help with The Pool Hopper: contact us or browse frequently asked questions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #0D9488;
@@ -15,122 +19,184 @@
       --text-muted: #0F766E;
       --border: #99F6E4;
     }
+    *, *::before, *::after { box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
       color: var(--text);
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      line-height: 1.7;
     }
-    header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 24px;
-      text-align: center;
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px 80px; }
+    .brand {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 22px; font-weight: 800; color: var(--primary-dark);
+      text-decoration: none; padding: 28px 0 12px;
     }
-    .logo {
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--primary-dark);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .tagline {
-      color: var(--text-muted);
-      font-size: 15px;
-      margin-top: 4px;
-    }
-    container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      display: block;
-    }
+    .brand svg { flex-shrink: 0; }
+    h1 { font-size: 2rem; font-weight: 800; margin: 8px 0 4px; color: var(--primary-dark); }
+    .subtitle { color: var(--text-muted); margin: 0 0 32px; font-size: 1.05rem; }
+    section { margin-bottom: 24px; }
     .card {
       background: var(--surface);
-      border-radius: 12px;
       border: 1px solid var(--border);
-      padding: 32px;
-      margin-bottom: 24px;
-      box-shadow: 0 2px 8px rgba(13, 148, 136, 0.05);
+      border-radius: 14px;
+      padding: 28px 32px;
+      box-shadow: 0 2px 10px rgba(13,148,136,.06);
     }
-    h1, h2, h3 {
-      color: var(--primary-dark);
-      margin-top: 0;
-    }
-    ul, ol {
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-    a {
-      color: var(--primary);
+    .card h2 { margin-top: 0; color: var(--primary-dark); font-size: 1.2rem; }
+    .button {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 700;
       text-decoration: none;
+      font-size: 0.95rem;
     }
-    a:hover {
-      text-decoration: underline;
+    .button:hover { background: var(--primary-dark); }
+    details { border-top: 1px solid var(--border); padding: 14px 0; }
+    details:last-child { border-bottom: 1px solid var(--border); }
+    summary {
+      font-weight: 700; cursor: pointer; list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
     }
+    summary::after { content: '+'; font-size: 1.3rem; color: var(--primary); }
+    details[open] summary::after { content: '−'; }
+    details p { margin: 10px 0 0; color: var(--text); }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
     footer {
-      text-align: center;
-      padding: 32px 20px;
-      color: var(--text-muted);
-      font-size: 14px;
-      border-top: 1px solid var(--border);
-      margin-top: 60px;
+      text-align: center; padding: 32px 20px;
+      color: var(--text-muted); font-size: 14px;
+      border-top: 1px solid var(--border); margin-top: 60px;
     }
-    .nav-links {
-      margin-top: 12px;
-    }
-    .nav-links a {
-      margin: 0 12px;
-      font-weight: 600;
-    }
+    nav { margin: 8px 0 28px; font-size: 0.9rem; }
+    nav a { margin-right: 16px; font-weight: 600; color: var(--text-muted); }
   </style>
 </head>
 <body>
+<div class="wrap">
 
-  <header>
-    <a href="#" class="logo">🏊 Pool Hopper</a>
-    <div class="tagline">Pool Care & Chemical Assistant</div>
-    <div class="nav-links">
-      <a href="#getting-started">Getting Started</a>
-      <a href="#support">Support</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
+  <a class="brand" href="#">
+    <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="64" height="64" rx="14" fill="#0D9488"/>
+      <ellipse cx="32" cy="38" rx="18" ry="8" fill="#2DD4BF" opacity="0.5"/>
+      <path d="M14 34 Q22 28 32 34 Q42 40 50 34" stroke="#E0FEFA" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M14 38 Q22 32 32 38 Q42 44 50 38" stroke="#E0FEFA" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <rect x="28" y="16" width="8" height="14" rx="4" fill="#CCFBF1"/>
+      <circle cx="32" cy="14" r="4" fill="#99F6E4"/>
+    </svg>
+    <span>The Pool Hopper</span>
+  </a>
+
+  <nav>
+    <a href="#">Support</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </nav>
+
+  <h1>Support</h1>
+  <p class="subtitle">Answers to common questions, and how to reach us.</p>
+
+  <section>
+    <div class="card">
+      <h2>Contact us</h2>
+      <p>Running into a problem, found a bug, or have a feature request? Email us and we'll get back to you.</p>
+      <p><a class="button" href="mailto:contact@beltov.dk">contact@beltov.dk</a></p>
     </div>
-  </header>
+  </section>
 
-  <container>
-    <div class="card" id="about">
-      <h2>About Pool Hopper</h2>
-      <p>Pool Hopper is the ultimate mobile field service assistant built specifically for pool cleaning and maintenance professionals. Track chemical levels and dosing, log service visits, generate professional PDF invoices with photo proof of work, optimize daily GPS routes, and manage recurring client visits — all offline-first.</p>
-    </div>
-
-    <div class="card" id="getting-started">
-      <h2>Getting Started Guide</h2>
-      <ol>
-        <li><strong>Set Up Your Defaults:</strong> Open Settings to set your default hourly rate and currency.</li>
-        <li><strong>Add Your Customers:</strong> Head to Job Entry or Customers tab to save customer pool addresses and contact info.</li>
-        <li><strong>Add Your Equipment:</strong> Register your pool vacuums, filter pumps, salt chlorine cells, and test kits under the Equipment tab.</li>
-        <li><strong>Log Service Visits:</strong> Record completed jobs — water chemical test results, skim & vacuum, shock treatments — with before &amp; after photos.</li>
-        <li><strong>Generate Invoices &amp; Run Reports:</strong> Issue PDF invoices directly to clients and track profit &amp; loss from the Reports tab.</li>
+  <section>
+    <div class="card">
+      <h2>Getting started</h2>
+      <ol style="padding-left:20px; margin:0;">
+        <li><strong>Set up defaults</strong> — Open Settings to set your default hourly rate and currency.</li>
+        <li><strong>Add customers</strong> — Tap New Job or visit the Customers tab to save pool addresses and contact info.</li>
+        <li><strong>Register equipment</strong> — Add your pool robots, filter pumps, salt chlorinators, and test kits under Equipment &amp; Maintenance.</li>
+        <li><strong>Log service visits</strong> — Record chemical test results, skim &amp; vacuum, shock treatments — with before &amp; after photos.</li>
+        <li><strong>Invoice &amp; report</strong> — Generate PDF invoices directly from the app and track profit &amp; loss in the Reports tab.</li>
       </ol>
     </div>
+  </section>
 
-    <div class="card" id="support">
-      <h2>Need Help or Support?</h2>
-      <p>If you encounter an issue, have feature requests, or need help with cloud sync or in-app purchases, please reach out to our team:</p>
-      <p>📧 <strong>Email Support:</strong> <a href="mailto:support@poolhopper.com">support@poolhopper.com</a></p>
+  <section>
+    <div class="card">
+      <h2>Frequently asked questions</h2>
+
+      <details>
+        <summary>How do I set my default hourly rate and currency?</summary>
+        <p>Go to <strong>Settings</strong> and set your default hourly rate and preferred currency. These pre-fill every new job automatically, saving time in the field.</p>
+      </details>
+
+      <details>
+        <summary>How do I change the app's language?</summary>
+        <p>Go to <strong>Settings → Language</strong> and pick from the list, or choose "System default" to follow your device's language automatically.</p>
+      </details>
+
+      <details>
+        <summary>How do I add a new customer?</summary>
+        <p>Open <strong>New Job</strong>, tap the customer field, and choose "Add New Customer." You only need to do this once — they'll appear in every future job. For fuller details (address, email, phone, default rate) manage customers from the Invoices tab.</p>
+      </details>
+
+      <details>
+        <summary>How do I add a pool robot or piece of equipment?</summary>
+        <p>Go to the <strong>Equipment &amp; Maintenance</strong> tab and tap the + button. Add your pool vacuums, robotic cleaners, filter pumps, salt chlorine cells, and test kits. The Pool Hopper automatically tracks filter hours and motor hours as you log jobs, and alerts you when service is due.</p>
+      </details>
+
+      <details>
+        <summary>How do I track filter hours and set a service interval?</summary>
+        <p>When adding or editing equipment, set the <strong>Filter interval (hrs)</strong> field. Once the robot has run that many hours since its last filter replacement, the app shows a "Filter due" reminder on your dashboard and equipment card. After you log a <em>Filter Replacement</em> service event, the counter resets to zero automatically.</p>
+      </details>
+
+      <details>
+        <summary>How do I log a pool service visit?</summary>
+        <p>Tap <strong>New Job</strong>, select the customer and service date, choose the activities performed (chemical test, skim &amp; vacuum, shock, backwash, etc.), add the hours, and optionally attach before/after photos. Tap Save — the job is instantly available for invoicing.</p>
+      </details>
+
+      <details>
+        <summary>How do I log a filter or motor replacement?</summary>
+        <p>Go to <strong>Equipment &amp; Maintenance</strong>, find your robot, and tap <strong>Log Service</strong>. Select <em>Filter Replacement</em> (resets filter hours) or the relevant task type for your service. Add any parts used, the service date, and save.</p>
+      </details>
+
+      <details>
+        <summary>How do I generate and send a PDF invoice?</summary>
+        <p>Open the <strong>Invoices</strong> tab, find the job or create an invoice, fill in your business details if prompted, then tap <strong>Export PDF</strong>. You can share directly via email, AirDrop, or any app on your device.</p>
+      </details>
+
+      <details>
+        <summary>How do I optimise my daily route?</summary>
+        <p>In the <strong>Route</strong> tab, add your stops for the day. Tap <strong>Optimise Route</strong> to reorder stops by shortest drive time. Each stop opens Maps navigation with a single tap.</p>
+      </details>
+
+      <details>
+        <summary>What does The Pool Hopper Pro include?</summary>
+        <p>Pro unlocks unlimited jobs, unlimited customers, PDF invoice generation, route optimisation, equipment maintenance tracking, photo attachments, expense tracking, profit &amp; loss reports, and Household Cloud Sync across devices.</p>
+      </details>
+
+      <details>
+        <summary>How do I restore my purchase on a new device?</summary>
+        <p>Open the app, go to <strong>Settings → Restore Purchases</strong>. Make sure you're signed in with the same Apple ID used for the original purchase.</p>
+      </details>
+
+      <details>
+        <summary>Is my data backed up?</summary>
+        <p>All data is stored locally on your device (offline-first). Enable <strong>Household Cloud Sync</strong> (Pro feature) to sync across multiple devices. We also recommend enabling iCloud backup on your iPhone so your local data is included in Apple's standard device backup.</p>
+      </details>
+
     </div>
-  </container>
+  </section>
 
-  <footer>
-    &copy; Pool Hopper. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
-  </footer>
+</div>
+
+<footer>
+  &copy; The Pool Hopper. All rights reserved. |
+  <a href="privacy.html">Privacy Policy</a> |
+  <a href="terms.html">Terms of Service</a> |
+  <a href="mailto:contact@beltov.dk">contact@beltov.dk</a>
+</footer>
 
 </body>
 </html>
